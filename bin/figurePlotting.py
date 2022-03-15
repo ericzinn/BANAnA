@@ -194,8 +194,8 @@ def correlationHeatmap(alignmentDf, dum, correlationList, outputBasePath, cleanN
     heatMapDf = pd.DataFrame()
     # Convert our correlationList into a dictionary
     correlationDict = correlationList.to_dict()
-    # Now we can mapt the values (column + amino acid state) for each of the entries
-    # in our aligment by our dictionary of correlations
+    # Now we can map the values (column + amino acid state) for each of the entries
+    # in our alignment by our dictionary of correlations
     for index, row in alignmentDf.iterrows():
         # Empty list to hold the mapped values of a single capsid
         heatMapRow = []
