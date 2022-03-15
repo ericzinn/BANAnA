@@ -1,0 +1,52 @@
+# Name of the sample (antibody or serum sample) that you used in this experiment
+sampleName: "Demo"
+# List of the dilutions that you used in this experiment (include NS for no-serum)
+# Note, this is the reciprocal (so, if you diluted a sample 1:8192, just enter 8192)
+# Eg: ["NS", "512", "256", "128", "64"]
+# Warning: ORDER MATTERS
+listOfDilutions:  ["NS", "8192", "4096", "2048", "1024", "512", "256", "128", "64"]
+# List of all of the libraries that you included in the experiment
+# Note, include "Control" every time, you'll specify which controls you ACTUALLY
+# included next
+# Eg: ["Anc80", "Anc81", "Anc82", "Control"]
+listOfLibraries: ["Anc80", "Anc81", "Anc82", "Anc83", "Anc84", "Anc110", "Anc113", "Anc126", "Anc127" "Control"]
+# List of all the different barcoded AAVs you included in this experiment
+# Note, include your spike-in barcode here.  You'll specify it next
+# Eg: ["Control_AAV1", "Control_AAV2", "Control_PHP-B"]
+listOfControls: ["Control_AAV1", "Control_AAV2","Control_AAV7", "Control_AAV8", "Control_AAV9", "Control_Rh.10", "Control_PHP-B"]
+# Which of the aforementioned barcodes was your spike-in control?
+# Eg: "Control_PHP-B"
+spikeInBarcode: "Control_PHP-B"
+# List of samples that you would like to omit from this analysis
+# Careful, this will skip these samples entirely...have some good reason for doing this please
+# Eg: ["NSC-8", "2048B-8"]
+badSamples: []
+# EXPERIMENTAL: colormap you'd like to use throughout the analysis pipeline as a dictionary
+colorDict:
+  "Anc80": "#1C74B0"
+  "Anc81": "#ADC6EA"
+  "Anc82": "#0F4368"
+  "Anc83": "#FF7F0D"
+  "Anc84": "#FFBB78"
+  "Anc110": "#BF600A"
+  "Anc113": "#289F2C"
+  "AAV7": "#9467BD"
+  "AAV8": "#C5B0D6"
+  "AAV9": "#543B6C"
+  "Rh.10": "#B06D5F"
+
+
+# The following are parameters for the correlation portion of BANaNA
+
+# Path to the fasta alignment (not including a by-position breakdown) you'd like to use
+# for generating correlations between capsid sequence and neutralization
+pathToAlignment: "HumanSerumClustalOmega.fasta"
+# Path to the fasta alignment (including a by-position breakdown) you'd like to use
+# for generating correlations between capsid sequence and neutralization
+pathToByPosAlignment: "HumanSerumByPosClustalOmega.fasta"
+# Reference sequence (in alignment)
+referenceSequence: "Control_AAV8"
+# Reference structure (pdb accession number)
+referenceStructure: "2qa0"
+# First position in Structure
+firstPosInStruc: 220
